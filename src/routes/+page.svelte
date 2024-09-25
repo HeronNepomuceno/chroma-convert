@@ -40,7 +40,7 @@
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		min-height: 80dvh;
+		min-height: 80vh;
 		padding: 0 32px;
 		width: 100%;
 		margin-top: 48px;
