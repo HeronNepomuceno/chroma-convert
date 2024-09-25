@@ -33,3 +33,7 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
+:root  {
+	--primary: #1e1b4b;
+}

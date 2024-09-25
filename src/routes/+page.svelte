@@ -20,7 +20,10 @@
 
 	<div class="panel">
 		
-		<input class="color-picker" type="color" bind:value={color}>
+		<label class="input">
+			<span class="label">Click to select</span>
+			<input id="color-picker" type="color" bind:value={color}>
+		</label>
 		<div class="color-board">
 			{#each formats as format, i}
 				<div class="color-by-format">
@@ -54,29 +57,39 @@
 		flex-direction: column;
 	}
 
-	.color-picker {
-		animation: rotate 30s linear infinite;
+	.input {
+		position: relative;
+	}
+
+	.label {
+		background: #000;
+		border-radius: 999px;
+		color: #e2e8f0;
+		cursor: pointer;
+		display: flex;
+		font-family: 'Roboto', sans-serif;
+		left: 50%;
+		top: 45%;
+		transform: translate(-50%, -45%);
+		padding: 0 8px;
+		position: absolute;
+		z-index: 2;
+		text-align: center;
+	}
+
+	#color-picker {
 		cursor: pointer;
 		border-radius: 9999px;
-		border: 2px dashed #000;
+		border: 2px dashed var(--primary);
 		height: 200px;
 		margin-bottom: 32px;
 		width: 200px;
 	}
 
-	@keyframes rotate {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
-	}
-
 	.color-board {
 		display: flex;
 		flex-direction: column;
-		border: 1px solid #000;
+		border: 1px solid var(--primary);
 		border-radius: 8px;
 		gap: 16px;
 		padding: 8px;
@@ -88,7 +101,7 @@
 		justify-content: space-between;
 	}
 
-	span {
+	.color-by-format > span {
 		font-family: 'Roboto', sans-serif;
 	}
 
@@ -98,7 +111,7 @@
 			margin-bottom: 32px;
 		}
 
-		.color-picker {
+		#color-picker {
 			height: 280px;
 			width: 280px;
 		}
@@ -106,6 +119,18 @@
 		.color-board {
 			font-size: 20px;
 			width: 400px;
+		}
+	}
+
+	@media screen and (min-width: 1000px) {
+		.title {
+			font-size: 36px;
+		}
+
+		.color-board {
+			font-size: 20px;
+			width: 480px;
+			margin-bottom: 80px;
 		}
 	}
 </style>

@@ -36,7 +36,8 @@
 
 	header {
 		align-items: center;
-		border: solid 1px black;
+		border: solid 1px var(--primary);
+		color: var(--primary);
 		border-radius: 8px;
 		display: flex;
 		flex-direction: column;
@@ -54,6 +55,7 @@
 
 	main {
 		align-items: center;
+		color: var(--primary);
 		display: flex;
 		justify-content: center;
 		width: 100%;
@@ -61,12 +63,17 @@
 
 	footer {
 		align-items: center;
+		border-top: 1px solid var(--primary);
+		color: var(--primary);
 		display: flex;
-		border-top: 1px solid #000;
 		flex-direction: column;
-		font-size: 20px;
 		justify-content: center;
-		padding: 32px;
+		padding-top: 32px;
+		width: 70%;
+	}
+
+	.copyright {
+		font-size: 18px;
 	}
 
 	.networking {
@@ -97,7 +104,9 @@
 			font-size: 26px;
 		}
 
-		.networking {
+		
+
+		.copyright, .networking {
 			font-size: 24px;
 		}
 	}
@@ -115,7 +124,7 @@
 			font-size: 32px;
 		}
 
-		.networking {
+		.copyright, .networking {
 			font-size: 28px;
 		}
 	}
