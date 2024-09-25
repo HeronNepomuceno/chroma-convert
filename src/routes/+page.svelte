@@ -37,10 +37,10 @@
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		min-height: 80dvh;
 		padding: 0 32px;
 		width: 100%;
+		margin-top: 48px;
 	}
 
 	.title {
@@ -108,23 +108,4 @@
 			width: 400px;
 		}
 	}
-	
-
-	@media screen and (min-width: 1000px) {
-		.panel {
-			flex-direction: row;
-			gap: 64px;
-		}
-
-		.title {
-			font-size: 48px;
-			margin-bottom: 64px;
-		}
-
-		.color-board {
-			font-size: 24px;
-			width: 480px;
-		}
-	}
-
 </style>
